@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Thinkful Tube</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    #results-target ul {
+      list-style: none;
+      margin: 0;
+    }
+    #results-target li {
+      width: 20%;
+      float: left;
+      padding: 10px;
+      border: solid thin #ccc;
+    }
+    #results-target img {
+      width: 100%;
+    }
+    .page-result {
+      height: 1px;
+      width: 50%;
+      float: left;
+    }
+    .prev {
+      text-align: left;
+    }
+    .next {
+      text-align: right;
+    }
+    #results-navigation {
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header role="banner">
+    <h1>Thinkful Tube</h1>
+  </header>
+
+  <main role="main">
+
+    <section id="video-search">
+
+      <form id="video-search-form" action="">
+
+        <fieldset>
+
+          <legend>
+            <h2>Search for a video</h2>
+          </legend>
+
+          <label for="video-title">Search</label><br>
+          <input id="video-title" type="text" value="">
+
+          <button type="submit">Search Videos</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="video-results">
+      <div id="results-target"></div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
