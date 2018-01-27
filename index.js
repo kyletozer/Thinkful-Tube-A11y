@@ -20,14 +20,17 @@ function renderResults(config) {
 
     let html = `
       <header>
-        <h2>Results</h2>
+        <h2>${data.items.length} Results</h2>
       </header>
     `;
 
     html += resultsHTML(data.items);
     html += navigationHTML(data);
 
-    $('#results-target').html(html);
+    $('#results-target').html(function() {
+      $(this).prop('hidden', false);
+      return html;
+    });
   });
 }
 
